@@ -1,0 +1,30 @@
+﻿@page "/compras"
+@using TesteBlazor.Data.Services
+@using TesteBlazor.Data.Models
+@inject CompraService compraService
+
+<h1>Pagina de Compras</h1>
+
+Welcome to your new app.
+
+@if (compras == null)
+{
+    <p><em>Loading...</em></p>
+} else
+{
+    foreach (var compra in compras)
+    {
+        <p>
+            @compra.NomeCliente;
+        </p>
+    }
+}
+
+@functions{
+    IEnumerable<Compra> compras;
+
+    protected override async Task OnInitAsync()
+    {
+        compras = await compraService.GetCompras();
+    }
+}

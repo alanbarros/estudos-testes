@@ -4,8 +4,8 @@ const routes = require('./routes');
 
 const server = express();
 
-mongoose.connect('mongodb+srv://omnistack:uchiha98@cluster0-4gd2p.azure.mongodb.net/omnistack8?retryWrites=true&w=majority'{
-    useNewUrlParser: true
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-4gd2p.azure.mongodb.net/omnistack8?retryWrites=true&w=majority', {
+    useNewUrlParser : true
 });
 
 server.use(express.json());

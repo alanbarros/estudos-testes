@@ -12,6 +12,10 @@ module.exports = {
         if(!targetDev){
             return res.status(400).json({ message : "Dev not exists"});
         }
+
+        if(targetDev.likes.includes(loggedDev._id)){
+            console.log('DEU MATH')
+        }
         
         loggedDev.likes.push(targetDev._id);
 

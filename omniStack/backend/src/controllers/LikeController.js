@@ -16,11 +16,13 @@ module.exports = {
         if(targetDev.likes.includes(loggedDev._id)){
             console.log('DEU MATH')
         }
-        
+
         loggedDev.likes.push(targetDev._id);
 
         await loggedDev.save();
 
         return res.json(loggedDev);
+
+        return res.json({ok:true});
     }
 }

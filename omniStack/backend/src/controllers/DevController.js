@@ -11,7 +11,7 @@ module.exports = {
             $and: [
               { _id: { $ne: user } },
               { _id: { $nin: loggedDev.likes } },
-              { _id: { $nin: loggedDev.deslikes } },  
+              { _id: { $nin: loggedDev.dislikes } },  
             ],
         });
 

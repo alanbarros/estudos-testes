@@ -81,7 +81,7 @@ export default function Main({ match }){
                 ))}
             </ul>
             ) : (
-                <div className="empty">Ababou :(</div>
+                <div className="empty">Acabou :(</div>
             )}
             { matchDev && (
                 <div className="match-container">

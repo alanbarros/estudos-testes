@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  bookstore_api:
+    image: bookstore
+    build:
+      context: .
+    ports:
+      - "20000:80"
+    networks:
+      - bookstore-network
+networks: 
+    bookstore-network:
+        driver: bridge

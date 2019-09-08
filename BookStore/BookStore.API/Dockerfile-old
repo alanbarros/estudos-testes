@@ -1,0 +1,20 @@
+#FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
+RUN apt update && \
+    apt install unzip && \
+    curl -sSL https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l /vsdbg
+WORKDIR /source
+
+# Copiar csproj e restaurar dependencias
+COPY *.csproj .
+RUN dotnet restore
+
+# Build da aplicacao
+COPY . .
+RUN dotnet publish -c Release -o /app/
+
+# Build da imagem
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+WORKDIR /app
+COPY --from=builder /app .
+ENTRYPOINT ["dotnet", "BookStore.API.dll"]

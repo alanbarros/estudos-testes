@@ -1,0 +1,22 @@
+version: "3"
+services:
+  bookstore:
+    image: alanbarros/bookstore:latest
+    container_name: bookstore_debug
+    build:
+      args:
+        buildconfig: Debug
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5001
+    ports:
+      - "5001:5001"
+    networks:
+      - bookstore-network
+networks: 
+    bookstore-network:
+        driver: bridge

@@ -1,0 +1,14 @@
+/home/alan/src/Testes/Docker/testeDocker/bin/Debug/netcoreapp2.2/testeDocker.deps.json
+/home/alan/src/Testes/Docker/testeDocker/bin/Debug/netcoreapp2.2/testeDocker.runtimeconfig.json
+/home/alan/src/Testes/Docker/testeDocker/bin/Debug/netcoreapp2.2/testeDocker.runtimeconfig.dev.json
+/home/alan/src/Testes/Docker/testeDocker/bin/Debug/netcoreapp2.2/testeDocker.dll
+/home/alan/src/Testes/Docker/testeDocker/bin/Debug/netcoreapp2.2/testeDocker.pdb
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.csprojAssemblyReference.cache
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.csproj.CoreCompileInputs.cache
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.RazorAssemblyInfo.cache
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.RazorAssemblyInfo.cs
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.AssemblyInfoInputs.cache
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.AssemblyInfo.cs
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.RazorTargetAssemblyInfo.cache
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.dll
+/home/alan/src/Testes/Docker/testeDocker/obj/Debug/netcoreapp2.2/testeDocker.pdb

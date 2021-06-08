@@ -1,0 +1,11 @@
+**/node_modules
+
+## Node / Yarn
+**/yarn.lock
+
+## Dotnet
+**/obj
+**/bin
+
+## Settings
+**/.settings

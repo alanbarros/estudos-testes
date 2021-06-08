@@ -9,3 +9,6 @@
 
 ## Settings
 **/.settings
+
+# Python
+**/__pycache__

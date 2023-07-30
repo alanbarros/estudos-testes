@@ -9,23 +9,37 @@ class Jogo:
 
     def escolher_simbolo(self, participante: Participante) -> int:
         print("{nome} escolha um simbolo".format(nome=participante.nome))
-        print("1 - Pedra")
-        print("2 - Papel")
-        print("3 - Tesoura")
+        
+        switcher = {
+            "1": "Pedra",
+            "2": "Papel",
+            "3": "Teroura",
+            "4": "Lagarto",
+            "5": "Spoke"
+        }
+
+        for item in switcher:
+            print("{key} - {value}".format(key=item, value=switcher[item]))
+        
         simbolo = input()
-        match simbolo:
-            case '1' | '2' | '3':
-                return simbolo
-            case _:
+
+        exist = switcher.get(simbolo, "notFound")
+        match exist:
+            case "notFound":
                 print("Escolha invalida! Tente novamente")
                 simbolo = self.escolher_simbolo(participante)
+            case _:
+                return simbolo
         return simbolo
     
-    def definir_vencedor(self) -> int: # 1 > 3, 3 > 2, 2 > 1
+    def definir_vencedor(self) -> int: 
+        # http://frontdaciencia.blogspot.com/2016/06/pedra-papel-tesoura-lagarto-spock.html 
         regras = [
-            [0, 2, 1],
-            [1, 0, 2],
-            [2, 1, 0]
+            [0, 2, 1, 1, 2],
+            [1, 0, 2, 2, 1],
+            [2, 1, 0, 1, 2],
+            [2, 1, 2, 0, 1],
+            [1, 2, 1, 2, 0]
         ]
         return regras[self.__simbolo_p1-1][self.__simbolo_p2-1]
     
